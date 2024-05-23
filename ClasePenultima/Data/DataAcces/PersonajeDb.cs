@@ -161,5 +161,27 @@ namespace ClasePenultima.Data.DataAcces
             }
             return personaje;
         }
+
+        //Actualizar datos
+
+        public void ActulizarPJ(int id, string nombre, string raza, int nivelPoder,string historia)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = "UPDATE personajes_dragon_ball SET nombre = @nombre, raza = @raza, nivel_poder = @nivelPoder, historia = @historia WHERE id = @id";
+                using (MySqlCommand command = new MySqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@nombre", nombre);
+                    command.Parameters.AddWithValue("@raza", raza);
+                    command.Parameters.AddWithValue("@nivelPoder", nivelPoder);
+                    command.Parameters.AddWithValue("@historia", historia);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

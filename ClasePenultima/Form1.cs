@@ -149,5 +149,31 @@ namespace ClasePenultima
         {
             textBoxRaza.Text = comboBoxRazas.SelectedItem.ToString();
         }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+            string nombre = textBoxNombre.Text;
+            string raza = textBoxRaza.Text;
+            string descipcion = textBoxDPJ.Text;
+            int nivelPoder = (int)numericUpDownNivelDePoder.Value;
+            if (!string.IsNullOrWhiteSpace(textBoxID.Text))
+            {
+                int id = int.Parse(textBoxID.Text);
+                MessageBox.Show("Actualizo Correctamente");
+                personaje.ActulizarPJ(id, nombre, raza, nivelPoder, descipcion);
+                dataGridViewPersonajes.DataSource = personaje.LeerPersonajes();
+                textBoxID.Clear();
+                textBoxNombre.Clear();
+                textBoxRaza.Clear();
+                textBoxDPJ.Clear();
+                numericUpDownNivelDePoder.ResetText();
+
+            }
+            else
+            {
+                MessageBox.Show("Ingrese la ID del personaje");
+                textBoxID.Focus(); // Devolver el foco al TextBox
+            }
+        }
     }
 }

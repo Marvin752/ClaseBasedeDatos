@@ -51,13 +51,14 @@
             this.labelFsalida = new System.Windows.Forms.Label();
             this.dateTimePickerSalida = new System.Windows.Forms.DateTimePicker();
             this.buttonBuscarF = new System.Windows.Forms.Button();
+            this.buttonActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNivelDePoder)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonNueva
             // 
-            this.buttonNueva.Location = new System.Drawing.Point(439, 210);
+            this.buttonNueva.Location = new System.Drawing.Point(1100, 210);
             this.buttonNueva.Name = "buttonNueva";
             this.buttonNueva.Size = new System.Drawing.Size(115, 35);
             this.buttonNueva.TabIndex = 0;
@@ -77,7 +78,7 @@
             // 
             // buttonCargar
             // 
-            this.buttonCargar.Location = new System.Drawing.Point(1100, 210);
+            this.buttonCargar.Location = new System.Drawing.Point(439, 210);
             this.buttonCargar.Name = "buttonCargar";
             this.buttonCargar.Size = new System.Drawing.Size(115, 35);
             this.buttonCargar.TabIndex = 2;
@@ -124,6 +125,11 @@
             // numericUpDownNivelDePoder
             // 
             this.numericUpDownNivelDePoder.Location = new System.Drawing.Point(152, 179);
+            this.numericUpDownNivelDePoder.Maximum = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
             this.numericUpDownNivelDePoder.Name = "numericUpDownNivelDePoder";
             this.numericUpDownNivelDePoder.Size = new System.Drawing.Size(195, 22);
             this.numericUpDownNivelDePoder.TabIndex = 7;
@@ -137,7 +143,7 @@
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(152, 59);
+            this.textBoxNombre.Location = new System.Drawing.Point(152, 65);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(195, 22);
             this.textBoxNombre.TabIndex = 9;
@@ -205,7 +211,7 @@
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(124, 281);
+            this.buttonBuscar.Location = new System.Drawing.Point(213, 282);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(134, 30);
             this.buttonBuscar.TabIndex = 17;
@@ -255,11 +261,22 @@
             this.buttonBuscarF.UseVisualStyleBackColor = true;
             this.buttonBuscarF.Click += new System.EventHandler(this.buttonBuscarF_Click);
             // 
+            // buttonActualizar
+            // 
+            this.buttonActualizar.Location = new System.Drawing.Point(41, 282);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(134, 30);
+            this.buttonActualizar.TabIndex = 23;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.UseVisualStyleBackColor = true;
+            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1301, 667);
+            this.Controls.Add(this.buttonActualizar);
             this.Controls.Add(this.buttonBuscarF);
             this.Controls.Add(this.dateTimePickerSalida);
             this.Controls.Add(this.labelFsalida);
@@ -318,6 +335,7 @@
         private System.Windows.Forms.Label labelFsalida;
         private System.Windows.Forms.DateTimePicker dateTimePickerSalida;
         private System.Windows.Forms.Button buttonBuscarF;
+        private System.Windows.Forms.Button buttonActualizar;
     }
 }
 
